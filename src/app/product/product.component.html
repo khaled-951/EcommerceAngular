@@ -1,0 +1,9 @@
+<p>product works!</p>
+<div *ngFor="let i of products">
+  <h2>{{i.price}}</h2>
+  <br>
+</div>
+After getting all the products !<br>
+A Single Product: <button (click)="getIt()">click me !</button><br>
+{{singleProduct?.id}}
+

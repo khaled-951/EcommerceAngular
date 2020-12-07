@@ -1,0 +1,141 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "email": "test@test.tn",
+      "password": "12345",
+      "firstName": "test",
+      "lastName": "test"
+    },
+    {
+      "id": 2,
+      "email": "test2@test.tn",
+      "password": "12345",
+      "firstName": "test2",
+      "lastName": "test2"
+    },
+    {
+      "id": 3,
+      "email": "test3@test.tn",
+      "password": "12345",
+      "firstName": "test3",
+      "lastName": "test3"
+    }
+  ],
+  "Products": [
+    {
+      "id": 1,
+      "name": "product1",
+      "description": "product description1",
+      "Quantity": 120,
+      "image": "../src/product1.jpg",
+      "price": 19.5
+    },
+    {
+      "id": 2,
+      "name": "product2",
+      "description": "product description2",
+      "Quantity": 140,
+      "image": "../src/product2.jpg",
+      "price": 19.5
+    },
+    {
+      "id": 3,
+      "name": "product3",
+      "description": "product description3",
+      "Quantity": 160,
+      "image": "../src/product3.jpg",
+      "price": 19.5
+    }
+  ],
+  "Orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productsList": [
+        {
+          "productId": 1,
+          "productQuantity": 5
+        }
+      ],
+      "address": "ariana soghra",
+      "zipCode": 2083,
+      "State": "ariana",
+      "phone": 28607679
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "productsList": [
+        {
+          "productId": 3,
+          "productQuantity": 10
+        },
+        {
+          "productId": 2,
+          "productQuantity": 15
+        }
+      ],
+      "address": "Hammam Chott",
+      "zipCode": 2000,
+      "State": "Ben Arous",
+      "phone": 28607679
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "productsList": [
+        {
+          "productId": 2,
+          "productQuantity": 120
+        }
+      ],
+      "address": "Montplaisir",
+      "zipCode": 3000,
+      "State": "Tunis",
+      "phone": 28607679
+    },
+    {
+      "id": 53,
+      "address": "hello world !"
+    }
+  ],
+  "Cart": [
+    {
+      "id": 1,
+      "productsList": [
+        {
+          "productId": 3,
+          "productQuantity": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "productsList": [
+        {
+          "productId": 3,
+          "productQuantity": 20
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "productsList": [
+        {
+          "productId": 3,
+          "productQuantity": 10
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "productsList": [
+        {
+          "productId": 3,
+          "productQuantity": 30
+        }
+      ]
+    }
+  ]
+}

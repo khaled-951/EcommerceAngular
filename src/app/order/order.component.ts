@@ -8,8 +8,7 @@ import {OrderService} from '../shared/order.service';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  orders: Order[];
-  o = new Order();
+  order = new Order();
 
   constructor(private OrderServiceInstance: OrderService) { }
 

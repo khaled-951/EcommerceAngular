@@ -1,6 +1,6 @@
 <form class="container mt-5 w-25">
   <input type="email" class="form-control" placeholder="Your Email..." autocomplete="on" name="email" [(ngModel)]="email">
-  <input type="password" class="form-control" placeholder="Your Password..." name="password" [(ngModel)]="password">
-  <div [hidden]="!showError" class="alert alert-danger">Verify Your Creentials Please !</div>
-  <div class="text-center"><button (click)="logUserIn(email, password)" class=" btn btn-primary">LogIn !</button></div>
+  <input type="password" class="form-control mt-2" placeholder="Your Password..." name="password" [(ngModel)]="password">
+  <div [hidden]="!showError" class="alert alert-danger mt-2">Verify Your Creentials Please !</div>
+  <div class="text-center mt-2"><button (click)="logUserIn(email, password)" class=" btn btn-primary">LogIn !</button></div>
 </form>

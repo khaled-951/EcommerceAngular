@@ -17,4 +17,7 @@ export class AppComponent {
   logUserOut(): void{
     this.UserServiceInstance.logUserOut() ;
   }
+  getCurrentUserFirstName(): string{
+    return this.UserServiceInstance.currentUser.firstName ;
+  }
 }

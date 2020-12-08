@@ -9,6 +9,12 @@ import {UserService} from './shared/user.service';
 export class AppComponent {
   title = 'ecom';
 
-  constructor(private UserServiceInstance: UserService) { }
-
+  constructor(private UserServiceInstance: UserService) {
+  }
+  isUserLoggedIn(): boolean{
+    return this.UserServiceInstance.currentUser !== null ;
+  }
+  logUserOut(): void{
+    this.UserServiceInstance.logUserOut() ;
+  }
 }

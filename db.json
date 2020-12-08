@@ -121,18 +121,27 @@
       "id": 1,
       "productsList": [
         {
-          "productId": 1,
+          "productId": 2,
+          "productQuantity": 22
+        },
+        {
+          "productId": 4,
           "productQuantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "productsList": [
+        {
+          "productId": 1,
+          "productQuantity": 2
         },
         {
           "productId": 2,
           "productQuantity": 2
         }
       ]
-    },
-    {
-      "id": 2,
-      "productsList": []
     },
     {
       "id": 3,

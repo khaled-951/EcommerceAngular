@@ -1,36 +1,40 @@
 <div class="container">
   <div class="row" >
-    <table (click)="addToCart()" class="table table-hover bg-dark">
+    <table class="table table-hover bg-dark mt-5">
       <thead class="bg-light">
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Ref</th>
         <th scope="col">Image</th>
         <th scope="col">Name</th>
         <th scope="col">Description</th>
         <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
         <th scope="col">Actions</th>
       </tr>
       </thead >
       <tbody class="bg-light">
       <tr *ngFor="let i of cart.productsList">
         <th scope="row">{{i.productId}}</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Otto</td>
+        <td><img src="{{getProductImage(i.productId)}}" alt="ImageNotFound" style="height: 75px; width: 75px;"></td>
+        <td>{{getProductName(i.productId)}}</td>
+        <td>{{getProductDescription(i.productId)}}</td>
         <td>
           <div>
-            <input type="number" value="{{i.productQuantity}}">
-            <a class="btn btn-outline-success">+</a>
-            <a class="btn btn-outline-danger">-</a>
+            <input type="number" min="1" (keyup)="updateProductQuantity(i.productId)" [(ngModel)]="i.productQuantity" name="updatedQuantity ">
+            <a class="btn btn-outline-success" (click)="increaseProductQuantity(i.productId, 1)" >+</a>
+            <a class="btn btn-outline-danger" (click)="decreaseProductQuantity(i.productId, 1)" >-</a>
           </div>
         </td>
+        <td>{{getProductPrice(i.productId)}}(TND)</td>
+        <td>{{getProductPrice(i.productId) * i.productQuantity}}(TND)</td>
         <td><a class="btn btn-danger" (click)="deleteProductFromCart(i.productId)" >Delete</a></td>
       </tr>
       </tbody>
     </table>
     <div class="d-flex justify-content-around">
       <a class="btn btn-danger" (click)="deleteAllItems()">Delete All Items !</a>
-      <a class="btn btn-success">Confirm Order !</a>
+      <a class="btn btn-success" (click)="getProductName(1)">Confirm Order !</a>
     </div>
   </div>
 </div>

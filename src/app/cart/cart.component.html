@@ -1,5 +1,36 @@
-<p>cart works!</p>
-  <h2>{{cart?.id}}</h2>
-  <br>
-lkjh
-<button (click)="addToCart()">click me !</button>
+<div class="container">
+  <div class="row" >
+    <table (click)="addToCart()" class="table table-hover bg-dark">
+      <thead class="bg-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead >
+      <tbody class="bg-light">
+      <tr *ngFor="let i of cart.productsList">
+        <th scope="row">{{i.productId}}</th>
+        <td>Mark</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>
+          <div>
+            <input type="number" value="{{i.productQuantity}}">
+            <a class="btn btn-outline-success">+</a>
+            <a class="btn btn-outline-danger">-</a>
+          </div>
+        </td>
+        <td><a class="btn btn-danger" (click)="deleteProductFromCart(i.productId)" >Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-around">
+      <a class="btn btn-danger" (click)="deleteAllItems()">Delete All Items !</a>
+      <a class="btn btn-success">Confirm Order !</a>
+    </div>
+  </div>
+</div>

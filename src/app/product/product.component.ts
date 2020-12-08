@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../shared/product.service';
 import {Product} from '../model/Product';
+import {CartService} from '../shared/cart.service';
+import {UserService} from '../shared/user.service';
 
 @Component({
   selector: 'app-product',
@@ -10,14 +12,14 @@ import {Product} from '../model/Product';
 export class ProductComponent implements OnInit {
   products: Product[];
   singleProduct: Product;
-  constructor(private ProductServiceInstance: ProductService) { }
+  constructor(private ProductServiceInstance: ProductService, private CartServiceInstance: CartService, private UserServiceInstance: UserService) { }
 
   ngOnInit(): void {
     this.ProductServiceInstance.readAllProducts().subscribe( data => this.products = data );
   }
-
-  getIt(): void {
-    this.ProductServiceInstance.readProductById(2).subscribe( data => this.singleProduct = data );
+  addProductToCart(productId: number): void{
+    this.CartServiceInstance.readCartByUserId(this.UserServiceInstance.currentUser.id).subscribe(
+      (data) => {this.CartServiceInstance.addProductToCart(productId, 1, data);}
+    );
   }
-
 }

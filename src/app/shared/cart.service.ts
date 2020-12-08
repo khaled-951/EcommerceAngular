@@ -69,4 +69,16 @@ export class CartService {
   deleteCart(userId: number): Observable<Cart>{
     return this.http.delete<Cart>(this.CartsUrl + '/' + userId);
   }
+
+  deleteProductFromCart(userId: number, productId: number): Cart{
+    let c = new Cart();
+    c.id = userId ;
+    c.productsList = [] ;
+    this.http.get<Cart>(this.CartsUrl + '/' + userId).subscribe(
+      (data) => {
+        c.productsList = data.productsList.filter( x => {return x.productId !== productId; }) ;
+        this.http.put<Cart>(this.CartsUrl + '/' + userId, c).subscribe( x => { c = x; }); }
+      );
+    return c ;
+  }
 }

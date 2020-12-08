@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Cart} from '../model/Cart';
 import {CartService} from '../shared/cart.service';
+import {UserService} from '../shared/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -10,22 +12,26 @@ import {CartService} from '../shared/cart.service';
 export class CartComponent implements OnInit {
   cart = new Cart();
 
-  constructor(private CartServiceInstance: CartService) { }
+  constructor(private CartServiceInstance: CartService, private UserServiceInstance: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    this.CartServiceInstance.readCartByUserId(2).subscribe(
-      (data: Cart) => { this.cart.id = data.id; this.cart.productsList = data.productsList; }
+    if (!this.UserServiceInstance.currentUser) {
+      this.router.navigate(['login']);
+    } else {
+      this.CartServiceInstance.readCartByUserId(this.UserServiceInstance.currentUser.id).subscribe(
+        (data: Cart) => {
+          this.cart.id = data.id;
+          this.cart.productsList = data.productsList;
+        }
+      );
+    }
+  }
+  deleteAllItems(): void{
+    this.CartServiceInstance.deleteCartProducts(this.UserServiceInstance.currentUser.id).subscribe(
+      (data) => {this.cart = data; }
     );
-    /*this.CartServiceInstance.addProductToCart(1, 2, this.cart);*/
   }
-
-  addToCart(){
-    this.cart.id = 4 ;
-    //console.log(this.cart.productsList);
-    this.CartServiceInstance.addProductToCart(3, 10, this.cart);
-    //this.CartServiceInstance.deleteCart(5).subscribe();
-    //this.CartServiceInstance.deleteCartProducts(2).subscribe();
-    //this.CartServiceInstance.updateCartProductQuantity(1, 3, 5);
+  deleteProductFromCart(productId: number): void{
+    this.cart = this.CartServiceInstance.deleteProductFromCart(this.UserServiceInstance.currentUser.id, productId);
   }
-
 }

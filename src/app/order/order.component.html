@@ -1,35 +1,52 @@
-
 <div class="container">
-  <div class="card mt-5">
+  <div class="card mt-4">
     <h5 class="card-header">Your Order</h5>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a class="btn btn-primary">Purchase !</a>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
+      <h5 class="card-title">Order Details:</h5>
+      <form [formGroup]="orderForm" >
+        <p class="card-text mt-sm-1">Address: </p>
+        <input type="text" formControlName="address" class="form-control" [(ngModel)]="order.address" placeholder="Your Address...">
+        <p class="card-text mt-sm-1">ZipCode: </p>
+        <input type="number" formControlName="zipcode" class="form-control" [(ngModel)]="order.zipCode" placeholder="Your Local ZipCode...">
+        <p class="card-text mt-sm-1">State: </p>
+        <input type="text" formControlName="state" class="form-control" [(ngModel)]="order.State" placeholder="Your State...">
+        <p class="card-text mt-sm-1">Phone Number: </p>
+        <input type="number" formControlName="phone" class="form-control" [(ngModel)]="order.phone" placeholder="Your Phone Number...">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Number Of Products</th>
+            <th scope="col">Products Cost</th>
+            <th scope="col">Taxes</th>
+            <th scope="col">Total Cost</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">{{getProductsNumber()}}</th>
+            <td>{{productsCost}}</td>
+            <td>{{productsCost * 0.1}}</td>
+            <td>{{ productsCost + (productsCost * 0.1)}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <input type="submit" class="btn btn-primary" (click)="updateOrderDetails();open(content);" value="Purchase !" [disabled]="orderForm.invalid">
+        <input type="reset" class="btn btn-danger m-sm-1" value="Reset Fields">
+      </form>
+    </div>
+  </div>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Thanks You For Your Purchase</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
       </button>
     </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+    <div class="modal-body">
+      <h3>Your Purchase Has Been Processed Succesfully !</h3>
     </div>
-  </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
 </div>

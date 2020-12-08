@@ -47,7 +47,6 @@ export class CartService {
     this.http.get<Cart>(this.CartsUrl + '/' + userId).subscribe(
       (data) => {
         productIndex = data.productsList.findIndex(x => x.productId === productId);
-        console.log(productIndex);
         if (productIndex > -1){
           data.productsList[productIndex].productQuantity = newQuantity;
           this.http.put<Cart>(this.CartsUrl + '/' + userId, data).subscribe();

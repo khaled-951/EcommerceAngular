@@ -70,14 +70,30 @@
       "userId": 1,
       "productsList": [
         {
+          "productId": 4,
+          "productQuantity": 9
+        },
+        {
+          "productId": 2,
+          "productQuantity": 4
+        },
+        {
+          "productId": 5,
+          "productQuantity": 1
+        },
+        {
+          "productId": 3,
+          "productQuantity": 1
+        },
+        {
           "productId": 1,
-          "productQuantity": 5
+          "productQuantity": 1
         }
       ],
-      "address": "ariana soghra",
+      "address": "ariana soghra545",
       "zipCode": 2083,
       "State": "ariana",
-      "phone": 28607679
+      "phone": 2860767954
     },
     {
       "id": 2,
@@ -121,11 +137,23 @@
       "id": 1,
       "productsList": [
         {
-          "productId": 2,
-          "productQuantity": 23
+          "productId": 4,
+          "productQuantity": 11
         },
         {
-          "productId": 4,
+          "productId": 2,
+          "productQuantity": 4
+        },
+        {
+          "productId": 5,
+          "productQuantity": 3
+        },
+        {
+          "productId": 3,
+          "productQuantity": 2
+        },
+        {
+          "productId": 1,
           "productQuantity": 1
         }
       ]

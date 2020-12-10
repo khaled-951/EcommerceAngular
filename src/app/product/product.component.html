@@ -7,7 +7,7 @@
         <p class="card-text">{{i.description}}</p>
         <h6 class="card-title">Price(TND): {{i.price}}</h6>
         <div class="d-flex justify-content-around">
-          <a href="#" class="btn btn-primary" >View Product</a>
+          <a routerLink="/product/{{i.id}}" routerLinkActive="active" class="btn btn-primary" >View Product</a>
           <a class="btn btn-outline-success" (click)="addProductToCart(i.id)">Add To Cart</a>
         </div>
       </div>

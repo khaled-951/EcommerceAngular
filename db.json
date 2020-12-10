@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "name": "product3",
+      "name": "product4",
       "description": "product description3",
       "Quantity": 160,
       "image": "../../assets/product1.jpg",
@@ -57,7 +57,7 @@
     },
     {
       "id": 5,
-      "name": "product3",
+      "name": "product5",
       "description": "product description3",
       "Quantity": 160,
       "image": "../../assets/product1.jpg",
@@ -71,23 +71,23 @@
       "productsList": [
         {
           "productId": 4,
-          "productQuantity": 9
+          "productQuantity": 11
         },
         {
           "productId": 2,
-          "productQuantity": 4
+          "productQuantity": 15
         },
         {
           "productId": 5,
-          "productQuantity": 1
+          "productQuantity": 3
         },
         {
           "productId": 3,
-          "productQuantity": 1
+          "productQuantity": 4
         },
         {
           "productId": 1,
-          "productQuantity": 1
+          "productQuantity": 2
         }
       ],
       "address": "ariana soghra545",
@@ -142,7 +142,7 @@
         },
         {
           "productId": 2,
-          "productQuantity": 4
+          "productQuantity": 16
         },
         {
           "productId": 5,
@@ -150,11 +150,11 @@
         },
         {
           "productId": 3,
-          "productQuantity": 2
+          "productQuantity": 4
         },
         {
           "productId": 1,
-          "productQuantity": 1
+          "productQuantity": 2
         }
       ]
     },

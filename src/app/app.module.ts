@@ -10,6 +10,7 @@ import { OrderComponent } from './order/order.component';
 import { CartComponent } from './cart/cart.component';
 import { UserComponent } from './user/user.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProductComponent,
     OrderComponent,
     CartComponent,
-    UserComponent
+    UserComponent,
+    ProductDetailsComponent
   ],
     imports: [
         BrowserModule,

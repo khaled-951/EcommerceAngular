@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { UserComponent } from './user/user.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductSearchComponent } from './product-search/product-search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     OrderComponent,
     CartComponent,
     UserComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductSearchComponent
   ],
     imports: [
         BrowserModule,

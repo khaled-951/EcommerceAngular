@@ -1,5 +1,6 @@
+<app-product-search (setSearchFor)="getSearchFor($event)" [itemsFound]="itemsFound" ></app-product-search>
 <div class="container">
-  <div class="d-flex align-content-stretch flex-wrap mt-2 m-lg-5">
+  <div class="d-flex align-content-stretch flex-wrap m-lg-5">
     <div *ngFor="let i of products" class="card bg-light mt-3 m-lg-4" style="width: 18rem;">
       <img class="card-img-top" src="{{i.image}}" alt="Card image cap">
       <div class="card-body">

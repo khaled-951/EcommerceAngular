@@ -57,7 +57,7 @@
     },
     {
       "id": 5,
-      "name": "product5",
+      "name": "product1",
       "description": "product description3",
       "Quantity": 160,
       "image": "../../assets/product1.jpg",
@@ -75,7 +75,7 @@
         },
         {
           "productId": 2,
-          "productQuantity": 15
+          "productQuantity": 17
         },
         {
           "productId": 5,
@@ -142,7 +142,7 @@
         },
         {
           "productId": 2,
-          "productQuantity": 16
+          "productQuantity": 17
         },
         {
           "productId": 5,

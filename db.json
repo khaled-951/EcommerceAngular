@@ -73,117 +73,43 @@
     {
       "id": 1,
       "userId": 1,
-      "productsList": [
-        {
-          "productId": 4,
-          "productQuantity": 17
-        },
-        {
-          "productId": 2,
-          "productQuantity": 23
-        },
-        {
-          "productId": 5,
-          "productQuantity": 9
-        },
-        {
-          "productId": 3,
-          "productQuantity": 9
-        },
-        {
-          "productId": 1,
-          "productQuantity": 10
-        }
-      ],
-      "address": "ariana soghra545",
-      "zipCode": 2083,
-      "State": "ariana",
-      "phone": 2860767954
+      "productsList": [],
+      "address": "",
+      "zipCode": 0,
+      "State": "Ariana",
+      "phone": 0
     },
     {
       "id": 2,
       "userId": 2,
-      "productsList": [
-        {
-          "productId": 3,
-          "productQuantity": 10
-        },
-        {
-          "productId": 2,
-          "productQuantity": 15
-        }
-      ],
-      "address": "Hammam Chott",
-      "zipCode": 2000,
-      "State": "Ben Arous",
-      "phone": 28607679
+      "productsList": [],
+      "address": "",
+      "zipCode": 0,
+      "State": "",
+      "phone": 0
     },
     {
       "id": 3,
       "userId": 3,
-      "productsList": [
-        {
-          "productId": 2,
-          "productQuantity": 120
-        }
-      ],
-      "address": "Montplaisir",
-      "zipCode": 3000,
-      "State": "Tunis",
-      "phone": 28607679
+      "productsList": [],
+      "address": "",
+      "zipCode": 0,
+      "State": "",
+      "phone": 0
     }
   ],
   "Cart": [
     {
       "id": 1,
-      "productsList": [
-        {
-          "productId": 4,
-          "productQuantity": 17
-        },
-        {
-          "productId": 2,
-          "productQuantity": 23
-        },
-        {
-          "productId": 5,
-          "productQuantity": 9
-        },
-        {
-          "productId": 3,
-          "productQuantity": 9
-        },
-        {
-          "productId": 1,
-          "productQuantity": 10
-        }
-      ]
+      "productsList": []
     },
     {
       "id": 2,
-      "productsList": [
-        {
-          "productId": 1,
-          "productQuantity": 2
-        },
-        {
-          "productId": 2,
-          "productQuantity": 2
-        }
-      ]
+      "productsList": []
     },
     {
       "id": 3,
       "productsList": []
-    },
-    {
-      "id": 4,
-      "productsList": [
-        {
-          "productId": 3,
-          "productQuantity": 50
-        }
-      ]
     }
   ]
 }

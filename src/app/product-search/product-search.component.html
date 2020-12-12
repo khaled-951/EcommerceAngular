@@ -8,8 +8,11 @@
   <div class="card" style="width: 15rem;">
     <div class="card-header">Filter</div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Price: <input type="number"> To: <input type="number"></li>
-      <li class="list-group-item">Color: <input type="color"></li>
+      <li class="list-group-item">
+        Price: <input type="number" placeholder="Min..." name="priceMinFilter" [(ngModel)]="priceMinFilter" (keyup)="sendPriceMinFilter()">
+        To: <input type="number" placeholder="Max..." name="priceMaxFilter" [(ngModel)]="priceMaxFilter" (keyup)="sendPriceMaxFilter()">
+      </li>
+      <li class="list-group-item">Color: <input type="text" placeholder="Desired Color..." name="colorFilter" [(ngModel)]="colorFilter" (keyup)="sendColorFilter()" (change)="sendColorFilter()"></li>
     </ul>
   </div>
 </div>

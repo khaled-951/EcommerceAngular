@@ -1,4 +1,6 @@
-<app-product-search (setSearchFor)="getSearchFor($event)" [itemsFound]="itemsFound" ></app-product-search>
+<app-product-search (setSearchFor)="getSearchFor($event)" [itemsFound]="itemsFound"
+                    (setColorFilter)="getColorFilter($event)" (setPriceMinFilter)="getPriceMinFilter($event)"
+                    (setPriceMaxFilter)="getPriceMaxFilter($event)"></app-product-search>
 <div class="container">
   <div class="d-flex align-content-stretch flex-wrap m-lg-5">
     <div *ngFor="let i of products" class="card bg-light mt-3 m-lg-4" style="width: 18rem;">
@@ -6,12 +8,21 @@
       <div class="card-body">
         <h5 class="card-title">{{i.name}}</h5>
         <p class="card-text">{{i.description}}</p>
+        <p class="card-text">Product Color: {{i.color}}</p>
         <h6 class="card-title">Price(TND): {{i.price}}</h6>
         <div class="d-flex justify-content-around">
           <a routerLink="/product/{{i.id}}" routerLinkActive="active" class="btn btn-primary" >View Product</a>
-          <a class="btn btn-outline-success" (click)="addProductToCart(i.id)">Add To Cart</a>
+          <a class="btn btn-outline-success" (click)="addProductToCart(i.id);open(content);">Add To Cart</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <h5>This Product Has Been Added To Your Cart !</h5>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

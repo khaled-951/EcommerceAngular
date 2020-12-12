@@ -29,7 +29,8 @@
       "description": "product description1",
       "Quantity": 120,
       "image": "../../assets/product1.jpg",
-      "price": 19.5
+      "price": 10,
+      "color": "green"
     },
     {
       "id": 2,
@@ -37,7 +38,8 @@
       "description": "product description2",
       "Quantity": 140,
       "image": "../../assets/product1.jpg",
-      "price": 19.5
+      "price": 15,
+      "color": "black"
     },
     {
       "id": 3,
@@ -45,7 +47,8 @@
       "description": "product description3",
       "Quantity": 160,
       "image": "../../assets/product1.jpg",
-      "price": 19.5
+      "price": 20,
+      "color": "white"
     },
     {
       "id": 4,
@@ -53,7 +56,8 @@
       "description": "product description3",
       "Quantity": 160,
       "image": "../../assets/product1.jpg",
-      "price": 19.5
+      "price": 20,
+      "color": "blue"
     },
     {
       "id": 5,
@@ -61,7 +65,8 @@
       "description": "product description3",
       "Quantity": 160,
       "image": "../../assets/product1.jpg",
-      "price": 19.5
+      "price": 35,
+      "color": "grey"
     }
   ],
   "Orders": [
@@ -71,23 +76,23 @@
       "productsList": [
         {
           "productId": 4,
-          "productQuantity": 11
-        },
-        {
-          "productId": 2,
           "productQuantity": 17
         },
         {
+          "productId": 2,
+          "productQuantity": 23
+        },
+        {
           "productId": 5,
-          "productQuantity": 3
+          "productQuantity": 9
         },
         {
           "productId": 3,
-          "productQuantity": 4
+          "productQuantity": 9
         },
         {
           "productId": 1,
-          "productQuantity": 2
+          "productQuantity": 10
         }
       ],
       "address": "ariana soghra545",
@@ -126,10 +131,6 @@
       "zipCode": 3000,
       "State": "Tunis",
       "phone": 28607679
-    },
-    {
-      "id": 53,
-      "address": "hello world !"
     }
   ],
   "Cart": [
@@ -138,23 +139,23 @@
       "productsList": [
         {
           "productId": 4,
-          "productQuantity": 11
-        },
-        {
-          "productId": 2,
           "productQuantity": 17
         },
         {
+          "productId": 2,
+          "productQuantity": 23
+        },
+        {
           "productId": 5,
-          "productQuantity": 3
+          "productQuantity": 9
         },
         {
           "productId": 3,
-          "productQuantity": 4
+          "productQuantity": 9
         },
         {
           "productId": 1,
-          "productQuantity": 2
+          "productQuantity": 10
         }
       ]
     },

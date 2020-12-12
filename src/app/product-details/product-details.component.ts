@@ -4,6 +4,7 @@ import {ProductService} from '../shared/product.service';
 import {Product} from '../model/Product';
 import {CartService} from '../shared/cart.service';
 import {UserService} from '../shared/user.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-details',
@@ -13,7 +14,7 @@ import {UserService} from '../shared/user.service';
 export class ProductDetailsComponent implements OnInit {
   product: Product ;
 
-  constructor(private route: ActivatedRoute, private ProductServiceInstance: ProductService,
+  constructor(private route: ActivatedRoute, private ProductServiceInstance: ProductService, private modalService: NgbModal,
               private CartServiceInstance: CartService, private UserServiceInstance: UserService, private router: Router) { }
 
   ngOnInit(): void {
@@ -29,5 +30,9 @@ export class ProductDetailsComponent implements OnInit {
       );
     }
   }
-
+  open(content): void {
+    if (this.UserServiceInstance.currentUser !== null) {
+      this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+    }
+  }
 }

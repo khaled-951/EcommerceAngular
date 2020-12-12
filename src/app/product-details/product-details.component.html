@@ -5,21 +5,22 @@
       <h5 class="card-title">Product Name: {{product.name}}</h5>
       <p class="card-text">Product Description: {{product.description}}</p>
       <p class="card-text">Product Price: {{product.price}}</p>
+      <p class="card-text">Product Color: {{product.color}}</p>
       <img src="{{product.image}}" alt="ImageNotFound" class="img-fluid" style="width: 300px; height: 300px">
 
     </div>
     <div>
       <a routerLink="/products" routerLinkActive="active" class="btn btn-primary m-3">Go Back To Products !</a>
-      <a class="btn btn-outline-success m-2" id="addtocart" (click)="addProductToCart(product.id)">Add To Cart !</a>
+      <a class="btn btn-outline-success m-2" id="addtocart" (click)="addProductToCart(product.id); open(content)">Add To Cart !</a>
     </div>
   </div>
 </div>
-<div class="toast" data-autohide="false">
-  <div class="toast-header">
-    Toast Header
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <h5>This Product Has Been Added To Your Cart !</h5>
   </div>
-  <div class="toast-body">
-    Some text inside the toast body
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">Close</button>
   </div>
-</div>
+</ng-template>
 

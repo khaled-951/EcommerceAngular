@@ -5,4 +5,5 @@ export class Product{
   Quantity: number;
   image: string;
   price: number;
+  color: string ;
 }

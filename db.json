@@ -37,7 +37,7 @@
       "name": "product2",
       "description": "product description2",
       "Quantity": 140,
-      "image": "../../assets/product1.jpg",
+      "image": "../../assets/product3.jpg",
       "price": 15,
       "color": "black"
     },
@@ -46,7 +46,7 @@
       "name": "product3",
       "description": "product description3",
       "Quantity": 160,
-      "image": "../../assets/product1.jpg",
+      "image": "../../assets/product4.jpg",
       "price": 20,
       "color": "white"
     },
@@ -55,7 +55,7 @@
       "name": "product4",
       "description": "product description3",
       "Quantity": 160,
-      "image": "../../assets/product1.jpg",
+      "image": "../../assets/product5.jpg",
       "price": 20,
       "color": "blue"
     },

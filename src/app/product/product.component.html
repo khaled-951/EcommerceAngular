@@ -3,8 +3,8 @@
                     (setPriceMaxFilter)="getPriceMaxFilter($event)"></app-product-search>
 <div class="container">
   <div class="d-flex align-content-stretch flex-wrap m-lg-5">
-    <div *ngFor="let i of products" class="card bg-light mt-3 m-lg-4" style="width: 18rem;">
-      <img class="card-img-top" src="{{i.image}}" alt="Card image cap">
+    <div *ngFor="let i of products" class="card bg-light mt-3 m-lg-4" style="width: 18rem;height: 500px;opacity:90%;border-radius:10px;">
+      <img class="card-img-top" src="{{i.image}}" alt="Card image cap" style="height: 55%;width: 100%;">
       <div class="card-body">
         <h5 class="card-title">{{i.name}}</h5>
         <p class="card-text">{{i.description}}</p>

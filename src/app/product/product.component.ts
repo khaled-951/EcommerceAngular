@@ -39,7 +39,7 @@ export class ProductComponent implements OnInit {
       this.products = x ;
       this.itemsFound = undefined ;
       if (data){
-        this.products = this.products.filter( (y) =>  (y.name.indexOf(data) !== -1) || (y.description.indexOf(data) !== -1) || (y.price >= parseInt(data, 10)) );
+        this.products = this.products.filter( (y) =>  (y.name.indexOf(data) !== -1) || (y.description.indexOf(data) !== -1) || (y.color.indexOf(data) !== -1) || (y.price === parseInt(data, 10)) );
         this.itemsFound = this.products.length ;
       }
     } );
